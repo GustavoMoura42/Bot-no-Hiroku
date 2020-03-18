@@ -6,4 +6,4 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-"discord" = "1.3.2"
+"discord" = "==1.3.2"

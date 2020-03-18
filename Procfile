@@ -1,1 +1,1 @@
-worker: faztudo2001.py
+worker: python faztudo2001.py

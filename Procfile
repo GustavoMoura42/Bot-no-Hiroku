@@ -1,0 +1,1 @@
+worker: faztudo2001.py

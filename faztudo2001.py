@@ -1,4 +1,5 @@
 import discord
+import os
 from random import randint
 from ast import literal_eval
 
@@ -66,4 +67,4 @@ async def on_message(message):
             await CastMagia(message)
         
 
-client.run('NjA5OTIyOTMxNDg0NTI0NTQ0.XVNXFg.Luk4sham1ymdMyclVDEoweM4adM')
+client.run(os.environ['mudaessafitan'])

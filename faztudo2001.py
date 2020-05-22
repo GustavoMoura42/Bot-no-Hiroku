@@ -1,6 +1,7 @@
 import discord
 from random import randint
 from ast import literal_eval
+import os
 
 client = discord.Client()
 

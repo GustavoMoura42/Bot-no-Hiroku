@@ -49,17 +49,17 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author == client.user: return None
-        
+    tmp = str(message.content.lower())
+    if "d" in tmp:
+         qtd = str(tmp[0:tmp.find("d")])
+         lados = str(tmp[tmp.find("d")+1:])
+         if qtd.isdigit() and lados.isdigit():
+              await RollDice(lados, qtd, message)
     if message.content.lower().startswith('!'):
         if message.content.lower().replace("!","").startswith('charlie'):
             await CharlieBrown(message)
 
-        tmp = str(message.content.lower())
-        if "d" in tmp:
-            qtd = str(tmp[0:tmp.find("d")])
-            lados = str(tmp[tmp.find("d")+1:])
-            if qtd.isdigit() and lados.isdigit():
-                await RollDice(lados, qtd, message)
+        
 
             
         if message.content.lower().replace("!","").startswith('r'):

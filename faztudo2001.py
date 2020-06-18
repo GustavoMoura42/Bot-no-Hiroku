@@ -39,8 +39,9 @@ async def RollDice(x, y, message):
     # x = tipo de dado
     # y = vezes a rolar
     saida = [randint(1, int(x)) for i in range(int(y))]
-    apoio=str(saida)
-    apoio+=f' T= {str(sum(saida))}'
+    apoio='```'
+    apoio+=str(saida)
+    apoio+=f'\nTotal= {str(sum(saida))}```'
     await message.channel.send(apoio)
         
     

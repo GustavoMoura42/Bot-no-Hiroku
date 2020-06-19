@@ -67,6 +67,14 @@ async def on_message(message):
             await RegistraMagia(message)
         if message.content.lower().replace("!","").startswith('cast'):
             await CastMagia(message)
+        comandos = {'!reg':[RPG.RegistraMagia,"!reg 'nome_magia' 'dado' 'quantidade_dado'"], 
+              'adbb':[RPG.RollDice,"adbb onde 'a' é um numero e 'b' é um numero "], 
+              '!charlie':[CharlieBrown,"!charlie 'qq_texto'"],
+              '!cast':[RPG.CastMagia,"!cast 'nome_magia'"]}
+  
+        if message.content.lower() == "!help":
+            await message.channel.send("COMANDOS:")
+            for k in list(comandos.keys()): await message.channel.send(comandos[k][1])
         
 
 client.run(os.environ['mudaessafitan'])
